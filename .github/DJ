@@ -1,0 +1,16 @@
+// App.jsx
+import React, { useState, useRef } from 'react';
+import { Howl } from 'howler';
+
+export default function DJApp() {
+  const [trackA, setTrackA] = useState(null);
+  const [trackB, setTrackB] = useState(null);
+  const [volumeA, setVolumeA] = useState(1);
+  const [volumeB, setVolumeB] = useState(0);
+  const trackARef = useRef(null);
+  const trackBRef = useRef(null);
+
+  const handleFileChange = (event, setTrack, ref) => {
+    const file = event.target.files[0];
+    if (file) {
+      const ...
